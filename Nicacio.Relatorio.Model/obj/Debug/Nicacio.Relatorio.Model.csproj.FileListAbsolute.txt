@@ -1,0 +1,5 @@
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Model\bin\Debug\Nicacio.Relatorio.Model.dll
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Model\bin\Debug\Nicacio.Relatorio.Model.pdb
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Model\obj\Debug\Nicacio.Relatorio.Model.csprojResolveAssemblyReference.cache
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Model\obj\Debug\Nicacio.Relatorio.Model.dll
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Model\obj\Debug\Nicacio.Relatorio.Model.pdb

@@ -1,0 +1,11 @@
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Design\bin\Debug\Nicacio.Relatorio.Design.dll
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Design\bin\Debug\Nicacio.Relatorio.Design.pdb
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Design\bin\Debug\itextsharp.dll
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Design\bin\Debug\Nicacio.Relatorio.Model.dll
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Design\bin\Debug\Nicacio.Relatorio.Model.pdb
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Design\bin\Debug\itextsharp.xml
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Design\obj\Debug\Nicacio.Relatorio.Design.Report.csprojResolveAssemblyReference.cache
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Design\obj\Debug\Nicacio.Relatorio.Design.dll
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Design\obj\Debug\Nicacio.Relatorio.Design.pdb
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Design\bin\Debug\Nicacio.Relatorio.Extensions.dll
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Design\bin\Debug\Nicacio.Relatorio.Extensions.pdb

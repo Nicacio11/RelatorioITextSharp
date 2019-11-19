@@ -1,0 +1,5 @@
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Extensions\bin\Debug\Nicacio.Relatorio.Extensions.dll
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Extensions\bin\Debug\Nicacio.Relatorio.Extensions.pdb
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Extensions\obj\Debug\Nicacio.Relatorio.Extensions.dll
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Extensions\obj\Debug\Nicacio.Relatorio.Extensions.pdb
+c:\users\vitor.nicacio\documents\visual studio 2015\Projects\Nicacio.Relatorio.ITextSharp\Nicacio.Relatorio.Extensions\obj\Debug\Nicacio.Relatorio.Extensions.csprojResolveAssemblyReference.cache
