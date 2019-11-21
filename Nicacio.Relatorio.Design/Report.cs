@@ -66,7 +66,7 @@ namespace Nicacio.Relatorio.Design
 
 		public virtual void MontarCorpoDados()
 		{
-			doc = Paisagem ? new Document(PageSize.A4.Rotate(), 20, 10, 80, 80) : new Document(PageSize.A4, 20, 10, 80, 40);
+			doc = Paisagem ? new Document(PageSize.A4.Rotate(), 20, 10, 80, 110) : new Document(PageSize.A4, 20, 10, 80, 110);
 			output = new MemoryStream();
 			writer = PdfWriter.GetInstance(doc, output);
 

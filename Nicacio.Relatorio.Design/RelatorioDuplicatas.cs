@@ -14,9 +14,7 @@ namespace Nicacio.Relatorio.Design
 {
 	public class RelatorioDuplicatas : Report
 	{
-		private int QuantidadeTitulo = 0;
-		private string[] Titulos;
-		private string[,] CorpoValores;
+
 		public RelatorioDuplicatas()
 		{
 			Paisagem = false;
@@ -32,7 +30,7 @@ namespace Nicacio.Relatorio.Design
 			Font font = FontFactory.GetFont("Verdana", 8, Font.NORMAL, preto);
 			Font titulo = FontFactory.GetFont("Verdana", 8, Font.BOLD, preto);
 
-			float[] colsW = { 10, 10, 10, 10, 10 };
+			float[] colsW = { 10,10,10,10,10};
 			table.SetWidths(colsW);
 			table.HeaderRows = 1;
 			table.WidthPercentage = 100f;
@@ -71,71 +69,6 @@ namespace Nicacio.Relatorio.Design
 
 			doc.Add(table);
 		}
-		public void MontarTitulo(params string[] pTitulos)
-		{
-			QuantidadeTitulo = pTitulos.Length;
-			Titulos = pTitulos;
-		}
 
-		public void MontarValores<TEntidade>(List<TEntidade> entidades, params Expression<Func<TEntidade, string>>[] expression)
-		{
-			int Altura = entidades.Count();
-			int Largura = expression.Length;
-			var vEntidades = entidades.ToArray();
-			CorpoValores = new string[Altura, Largura];
-
-			for(var i = 0; i< vEntidades.Length; i++)
-			{
-				for (int j = 0; j < Largura; j++)
-				{
-					var value = vEntidades[i].GetPropertyName(expression[j]).ToString();
-					CorpoValores[i,j] = value.ToString();
-				}
-			}
-		}
-		public RelatorioDuplicatas Ready()
-		{
-			base.MontarCorpoDados();
-			#region Cabeçalho do Relatório
-			PdfPTable table = new PdfPTable(CorpoValores.GetLength(1));
-			BaseColor preto = new BaseColor(0, 0, 0);
-			BaseColor fundo = new BaseColor(200, 200, 200);
-			Font font = FontFactory.GetFont("Verdana", 8, Font.NORMAL, preto);
-			Font tituloFonte = FontFactory.GetFont("Verdana", 8, Font.BOLD, preto);
-
-			float[] colsW = { 10, 10, 10, 10, 10 };
-			table.SetWidths(colsW);
-			table.HeaderRows = 1;
-			table.WidthPercentage = 100f;
-
-			table.DefaultCell.Border = PdfPCell.BOTTOM_BORDER;
-			table.DefaultCell.BorderColor = preto;
-			table.DefaultCell.BorderColorBottom = new BaseColor(255, 255, 255);
-			table.DefaultCell.Padding = 10;
-
-			foreach (var tituloTexto in Titulos)
-			{
-				table.AddCell(getNewCell(tituloTexto, tituloFonte, Element.ALIGN_LEFT, 10, PdfPCell.BOTTOM_BORDER, preto, fundo));
-			}
-
-			for (int i = 0; i< CorpoValores.GetLength(0); i++)
-			{
-				for(int indexReference = 0; indexReference < 1; indexReference++)
-				{
-					var cell = getNewCell(CorpoValores[i, indexReference], tituloFonte, Element.ALIGN_LEFT, 10, PdfPCell.BOTTOM_BORDER);
-					cell.Colspan = 5;
-					table.AddCell(cell);
-				}
-				for(int j = 1; j < CorpoValores.GetLength(1); j++)
-				{
-					table.AddCell(getNewCell(CorpoValores[i,j], font, Element.ALIGN_LEFT, 5, PdfPCell.BOTTOM_BORDER));
-				}
-
-			}
-			doc.Add(table);
-			#endregion
-
-			return this;
-		}
 	}
 }

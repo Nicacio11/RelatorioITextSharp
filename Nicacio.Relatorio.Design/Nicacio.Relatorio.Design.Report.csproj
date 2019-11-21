@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelatorioDuplicatas.cs" />
+    <Compile Include="RelatorioDuplicatasDynamic.cs" />
     <Compile Include="Report.cs" />
     <Compile Include="ReportDetail.cs" />
   </ItemGroup>

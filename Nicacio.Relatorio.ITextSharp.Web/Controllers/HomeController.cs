@@ -39,12 +39,13 @@ namespace Nicacio.Relatorio.ITextSharp.Web.Controllers
 
 			return rpt;
 		}
-		private RelatorioDuplicatas RelatorioDuplicatasGeneric()
+		private RelatorioDuplicatasDynamic RelatorioDuplicatasGeneric()
 		{
-			var rpt = new RelatorioDuplicatas();
+			var rpt = new RelatorioDuplicatasDynamic();
 			rpt.BasePath = Server.MapPath("/");
 			rpt.PageTitle = "Folha de Pagamento";
 			rpt.ImprimirCabecalhoPadrao = true;
+			rpt.Paisagem = true;
 			rpt.ImprimirRodapePadrao = true;
 			var lItens = new DadosRelatorio().duplicatas;
 			var lItensViewModel = lItens.Select(x => new ReportDuplicata
@@ -56,14 +57,97 @@ namespace Nicacio.Relatorio.ITextSharp.Web.Controllers
 				Valor = x.Valor.ToString(),
 				RazaoSocial = x.cliente.RazaoSocial
 			}).ToList();
-			rpt.MontarTitulo("Número", "Emissão", "Vencimento", "Valor", "Saldo");
+			lItensViewModel.AddRange(lItens.Select(x => new ReportDuplicata
+			{
+				Emissao = x.Emissao.ToString(),
+				Numero = x.Numero,
+				Saldo = x.Saldo.ToString(),
+				Vencimento = x.Vencimento.ToString(),
+				Valor = x.Valor.ToString(),
+				RazaoSocial = x.cliente.RazaoSocial
+			}).ToList());
+			lItensViewModel.AddRange(lItens.Select(x => new ReportDuplicata
+			{
+				Emissao = x.Emissao.ToString(),
+				Numero = x.Numero,
+				Saldo = x.Saldo.ToString(),
+				Vencimento = x.Vencimento.ToString(),
+				Valor = x.Valor.ToString(),
+				RazaoSocial = x.cliente.RazaoSocial
+			}).ToList());
+			lItensViewModel.AddRange(lItens.Select(x => new ReportDuplicata
+			{
+				Emissao = x.Emissao.ToString(),
+				Numero = x.Numero,
+				Saldo = x.Saldo.ToString(),
+				Vencimento = x.Vencimento.ToString(),
+				Valor = x.Valor.ToString(),
+				RazaoSocial = x.cliente.RazaoSocial
+			}).ToList());
+			lItensViewModel.AddRange(lItens.Select(x => new ReportDuplicata
+			{
+				Emissao = x.Emissao.ToString(),
+				Numero = x.Numero,
+				Saldo = x.Saldo.ToString(),
+				Vencimento = x.Vencimento.ToString(),
+				Valor = x.Valor.ToString(),
+				RazaoSocial = x.cliente.RazaoSocial
+			}).ToList());
+			lItensViewModel.AddRange(lItens.Select(x => new ReportDuplicata
+			{
+				Emissao = x.Emissao.ToString(),
+				Numero = x.Numero,
+				Saldo = x.Saldo.ToString(),
+				Vencimento = x.Vencimento.ToString(),
+				Valor = x.Valor.ToString(),
+				RazaoSocial = x.cliente.RazaoSocial
+			}).ToList());
+			lItensViewModel.AddRange(lItens.Select(x => new ReportDuplicata
+			{
+				Emissao = x.Emissao.ToString(),
+				Numero = x.Numero,
+				Saldo = x.Saldo.ToString(),
+				Vencimento = x.Vencimento.ToString(),
+				Valor = x.Valor.ToString(),
+				RazaoSocial = x.cliente.RazaoSocial
+			}).ToList());
+			lItensViewModel.AddRange(lItens.Select(x => new ReportDuplicata
+			{
+				Emissao = x.Emissao.ToString(),
+				Numero = x.Numero,
+				Saldo = x.Saldo.ToString(),
+				Vencimento = x.Vencimento.ToString(),
+				Valor = x.Valor.ToString(),
+				RazaoSocial = x.cliente.RazaoSocial
+			}).ToList());
+			lItensViewModel.AddRange(lItens.Select(x => new ReportDuplicata
+			{
+				Emissao = x.Emissao.ToString(),
+				Numero = x.Numero,
+				Saldo = x.Saldo.ToString(),
+				Vencimento = x.Vencimento.ToString(),
+				Valor = x.Valor.ToString(),
+				RazaoSocial = x.cliente.RazaoSocial
+			}).ToList());
+			lItensViewModel.AddRange(lItens.Select(x => new ReportDuplicata
+			{
+				Emissao = x.Emissao.ToString(),
+				Numero = x.Numero,
+				Saldo = x.Saldo.ToString(),
+				Vencimento = x.Vencimento.ToString(),
+				Valor = x.Valor.ToString(),
+				RazaoSocial = x.cliente.RazaoSocial
+			}).ToList());
+			rpt.MontarTitulo("Número", "Emissão", "Vencimento", "Valor", "Saldo", "Saldo Novamente");
 			rpt.MontarValores<ReportDuplicata>(lItensViewModel, 
+				(x) => x.RazaoSocial,
 				(x) => x.Numero, 
 				(x) => x.Emissao, 
 				(x) => x.Vencimento, 
 				(x) => x.Valor, 
+				(x) => x.Saldo,
 				(x) => x.Saldo);
-			return rpt.Ready();
+			return rpt;
 		}
 		public ActionResult Preview()
 		{
